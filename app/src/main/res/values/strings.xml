@@ -3,12 +3,30 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string-array name="Languages">
-        <item>Java</item>
-        <item>Kotlin</item>
-        <item>Swift</item>
-        <item>Python</item>
-        <item>Scala</item>
-        <item>Perl</item>
+    <string name="course">Course :</string>
+    <string name="semester">Semester :</string>
+    <string name="ctmt">Final/CT/WT :</string>
+    <string name="cancel">cancel</string>
+    <string name="show">show</string>
+    <string-array name="courses">
+        <item>Please select an option</item>
+        <item>BE (Computer Science and Engineering)</item>
+    </string-array>
+    <string-array name="semester">
+        <item>Please select an option</item>
+        <item>Semester 1</item>
+        <item>Semester 2</item>
+        <item>Semester 3</item>
+        <item>Semester 4</item>
+        <item>Semester 5</item>
+        <item>Semester 6</item>
+        <item>Semester 7</item>
+        <item>Semester 8</item>
+    </string-array>
+    <string-array name="test">
+        <item>Please select an option</item>
+        <item>Final</item>
+        <item>CT</item>
+        <item>WT</item>
     </string-array>
 </resources>

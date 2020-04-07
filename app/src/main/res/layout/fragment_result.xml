@@ -5,12 +5,69 @@
     android:layout_height="match_parent"
     android:paddingTop="100dp">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/course"
+        android:textSize="20sp"
+        android:layout_marginStart="10dp"/>
+
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="match_parent"
         android:layout_height="42dp"
         android:gravity="center"
-        android:background="@drawable/bg_dropdown"/>
+        android:background="@drawable/bg_dropdown"
+        android:layout_margin="10dp"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/semester"
+        android:textSize="20sp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="10dp"/>
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:gravity="center"
+        android:background="@drawable/bg_dropdown"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ctmt"
+        android:textSize="20sp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="10dp"/>
+
+    <Spinner
+        android:id="@+id/spinner3"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:gravity="center"
+        android:background="@drawable/bg_dropdown"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="@string/show"
+        android:id="@+id/show_button"
+        android:layout_margin="10dp"
+        android:textSize="15sp"
+        android:background="@drawable/gradient2"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="@string/cancel"
+        android:id="@+id/cancel_button"
+        android:layout_margin="10dp"
+        android:textSize="15sp"
+        android:background="@drawable/gradient3"/>
 
 </LinearLayout>
