@@ -1,14 +1,18 @@
 package com.ssec.academiscore
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
+import android.view.View.VISIBLE
 import android.view.ViewGroup
 import android.widget.*
 
 class FragmentResult : Fragment() {
-    //private lateinit var textView: TextView
+
+    private lateinit var resetButton: Button
+    private lateinit var showButton: Button
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -16,62 +20,76 @@ class FragmentResult : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        val t=inflater.inflate(R.layout.fragment_result, container, false)
+        val view=inflater.inflate(R.layout.fragment_result, container, false)
 
-        //setting up course spiner
+        //setting course spinner
 
         val courses = resources.getStringArray(R.array.courses)
-        val spinner = t.findViewById<Spinner>(R.id.spinner)
+        val spinner = view.findViewById<Spinner>(R.id.spinner)
         spinner?.adapter = ArrayAdapter(requireContext(), R.layout.support_simple_spinner_dropdown_item, courses)
         spinner?.onItemSelectedListener = object :AdapterView.OnItemSelectedListener{
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-                println("erreur")
+            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
             }
 
-            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                //val type = parent?.getItemAtPosition(position).toString()
-                //Toast.makeText(activity,type, Toast.LENGTH_LONG).show()
-                //println(type)
+            override fun onNothingSelected(p0: AdapterView<*>?) {
+                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
             }
-
         }
 
-        //setting up semester spinner
+        //setting semester spinner
 
         val semester = resources.getStringArray(R.array.semester)
-        val spinner2 = t.findViewById<Spinner>(R.id.spinner2)
+        val spinner2 = view.findViewById<Spinner>(R.id.spinner2)
         spinner2?.adapter = ArrayAdapter(requireContext(), R.layout.support_simple_spinner_dropdown_item, semester)
         spinner2?.onItemSelectedListener = object :AdapterView.OnItemSelectedListener{
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-                println("erreur")
+            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
             }
 
-            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                //val type = parent?.getItemAtPosition(position).toString()
-                //Toast.makeText(activity,type, Toast.LENGTH_LONG).show()
-                //println(type)
+            override fun onNothingSelected(p0: AdapterView<*>?) {
+                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
             }
-
         }
 
-        //setting up test spinner
+        //setting test spinner
 
         val test = resources.getStringArray(R.array.test)
-        val spinner3 = t.findViewById<Spinner>(R.id.spinner3)
+        val spinner3 = view.findViewById<Spinner>(R.id.spinner3)
         spinner3?.adapter = ArrayAdapter(requireContext(), R.layout.support_simple_spinner_dropdown_item, test)
         spinner3?.onItemSelectedListener = object :AdapterView.OnItemSelectedListener{
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-                println("erreur")
+            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
             }
 
-            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                //val type = parent?.getItemAtPosition(position).toString()
-                //Toast.makeText(activity,type, Toast.LENGTH_LONG).show()
-                //println(type)
+            override fun onNothingSelected(p0: AdapterView<*>?) {
+                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
             }
-
         }
-        return t
+
+        //adding show button
+
+        showButton = view.findViewById(R.id.show_button)
+        showButton.setOnClickListener {
+            if(spinner.selectedItemPosition != 0 && spinner2.selectedItemPosition != 0 && spinner3.selectedItemPosition != 0 ) {
+                val intent = Intent(requireContext(), ResultActivity::class.java)
+                startActivity(intent)
+            }
+            // making toast onNothingSelected
+            else
+                Toast.makeText(requireContext(),"Please select the option", Toast.LENGTH_SHORT).show()
+        }
+
+        // adding reset button
+
+        resetButton = view.findViewById(R.id.reset_button)
+        resetButton.setOnClickListener {
+            spinner.setSelection(0)
+            spinner2.setSelection(0)
+            spinner3.setSelection(0)
+        }
+
+        return view
     }
 
 

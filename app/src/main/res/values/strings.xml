@@ -6,8 +6,11 @@
     <string name="course">Course :</string>
     <string name="semester">Semester :</string>
     <string name="ctmt">Final/CT/WT :</string>
-    <string name="cancel">cancel</string>
     <string name="show">show</string>
+    <string name="reset">reset</string>
+    <string name="home">Home</string>
+    <string name="result">Result</string>
+    <string name="contact">Contact</string>
     <string-array name="courses">
         <item>Please select an option</item>
         <item>BE (Computer Science and Engineering)</item>
@@ -28,5 +31,18 @@
         <item>Final</item>
         <item>CT</item>
         <item>WT</item>
+    </string-array>
+    <string-array name="ct">
+        <item>Please select an option</item>
+        <item>Class Test 1</item>
+        <item>Class test 2</item>
+    </string-array>
+    <string-array name="wt">
+        <item>Please select an option</item>
+        <item>Weekly Test 1</item>
+        <item>Weekly Test 2</item>
+        <item>Weekly Test 3</item>
+        <item>Weekly Test 4</item>
+        <item>Weekly Test 5</item>
     </string-array>
 </resources>
