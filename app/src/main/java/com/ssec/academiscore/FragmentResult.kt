@@ -28,13 +28,10 @@ class FragmentResult : Fragment() {
         val spinner = view.findViewById<Spinner>(R.id.spinner)
         spinner?.adapter = ArrayAdapter(requireContext(), R.layout.support_simple_spinner_dropdown_item, courses)
         spinner?.onItemSelectedListener = object :AdapterView.OnItemSelectedListener{
-            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-            }
 
-            override fun onNothingSelected(p0: AdapterView<*>?) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-            }
+            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {}
+
+            override fun onNothingSelected(p0: AdapterView<*>?) {}
         }
 
         //setting semester spinner
@@ -43,13 +40,10 @@ class FragmentResult : Fragment() {
         val spinner2 = view.findViewById<Spinner>(R.id.spinner2)
         spinner2?.adapter = ArrayAdapter(requireContext(), R.layout.support_simple_spinner_dropdown_item, semester)
         spinner2?.onItemSelectedListener = object :AdapterView.OnItemSelectedListener{
-            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-            }
 
-            override fun onNothingSelected(p0: AdapterView<*>?) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-            }
+            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {}
+
+            override fun onNothingSelected(p0: AdapterView<*>?) {}
         }
 
         //setting test spinner
@@ -58,13 +52,10 @@ class FragmentResult : Fragment() {
         val spinner3 = view.findViewById<Spinner>(R.id.spinner3)
         spinner3?.adapter = ArrayAdapter(requireContext(), R.layout.support_simple_spinner_dropdown_item, test)
         spinner3?.onItemSelectedListener = object :AdapterView.OnItemSelectedListener{
-            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-            }
 
-            override fun onNothingSelected(p0: AdapterView<*>?) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-            }
+            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {}
+
+            override fun onNothingSelected(p0: AdapterView<*>?) {}
         }
 
         //adding show button
