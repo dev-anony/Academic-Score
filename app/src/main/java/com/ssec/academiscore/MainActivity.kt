@@ -1,8 +1,10 @@
 package com.ssec.academiscore
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
+import android.view.MenuItem
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -46,6 +48,23 @@ class MainActivity : AppCompatActivity() {
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_main,menu)
         return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        when(item!!.itemId){
+            R.id.my_account-> {
+                val i = Intent(this,StudentActivity::class.java)
+                this.startActivity(i)
+            }
+            R.id.settings-> {
+                val i = Intent(this,SettingsActivity::class.java)
+                this.startActivity(i)
+            }
+            R.id.logout-> { 
+                //todo
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 
 }
