@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Academi score</string>
+    <string name="app_name">Academic score</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -77,4 +77,7 @@
     <string name="back">back</string>
     <string name="or">OR</string>
     <string name="get_pass_link">reset password</string>
+    <string name="wt_activity_label">Weekly test Results</string>
+    <string name="ct_activity_label">Class test Results</string>
+    <string name="result_activity_label">Final Result</string>
 </resources>

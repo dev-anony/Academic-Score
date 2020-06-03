@@ -1,4 +1,4 @@
-package com.ssec.academiscore
+package com.ssec.academicscore
 
 import org.junit.Test
 

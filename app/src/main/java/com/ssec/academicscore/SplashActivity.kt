@@ -1,4 +1,4 @@
-package com.ssec.academiscore
+package com.ssec.academicscore
 
 import android.content.Intent
 import android.os.Bundle

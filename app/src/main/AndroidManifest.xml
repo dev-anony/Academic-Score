@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.ssec.academiscore">
+    package="com.ssec.academicscore">
 
     <application
         android:allowBackup="true"
@@ -11,23 +11,29 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".WTActivity"></activity>
-        <activity android:name=".CTActivity" />
-        <activity android:name=".ForgotPasswordActivity" />
+        <activity android:name="com.ssec.academicscore.WTActivity"
+            android:label="@string/wt_activity_label"
+            android:parentActivityName="com.ssec.academicscore.MainActivity">
+        </activity>
+        <activity android:name="com.ssec.academicscore.CTActivity"
+            android:label="@string/ct_activity_label"
+            android:parentActivityName="com.ssec.academicscore.MainActivity">
+        </activity>
+        <activity android:name="com.ssec.academicscore.ForgotPasswordActivity" />
         <activity
-            android:name=".StudentActivity"
-            android:parentActivityName=".MainActivity" />
+            android:name="com.ssec.academicscore.StudentActivity"
+            android:parentActivityName="com.ssec.academicscore.MainActivity" />
         <activity
-            android:name=".SettingsActivity"
+            android:name="com.ssec.academicscore.SettingsActivity"
             android:label="@string/title_activity_settings"
-            android:parentActivityName=".MainActivity" />
-        <activity android:name=".MainActivity">
+            android:parentActivityName="com.ssec.academicscore.MainActivity" />
+        <activity android:name="com.ssec.academicscore.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".SplashScreenActivity"
+            android:name="com.ssec.academicscore.SplashScreenActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,8 +41,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".ResultActivity" />
+        <activity android:name="com.ssec.academicscore.LoginActivity" />
+        <activity android:name="com.ssec.academicscore.ResultActivity"
+            android:label="@string/result_activity_label"
+            android:parentActivityName="com.ssec.academicscore.MainActivity">
+        </activity>
     </application>
 
 </manifest>

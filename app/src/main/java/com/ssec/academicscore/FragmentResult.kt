@@ -1,11 +1,10 @@
-package com.ssec.academiscore
+package com.ssec.academicscore
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
-import android.view.View.VISIBLE
 import android.view.ViewGroup
 import android.widget.*
 

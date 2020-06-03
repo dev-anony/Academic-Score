@@ -1,12 +1,12 @@
-package com.ssec.academiscore
+package com.ssec.academicscore
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class WTActivity : AppCompatActivity() {
+class SettingsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_wt)
+        setContentView(R.layout.settings_activity)
     }
 }
