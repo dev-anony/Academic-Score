@@ -63,8 +63,20 @@ class FragmentResult : Fragment() {
         showButton = view.findViewById(R.id.show_button)
         showButton.setOnClickListener {
             if(spinner.selectedItemPosition != 0 && spinner2.selectedItemPosition != 0 && spinner3.selectedItemPosition != 0 ) {
-                val intent = Intent(requireContext(), ResultActivity::class.java)
-                startActivity(intent)
+                if(spinner3.selectedItemPosition == 0){
+                    val intent = Intent(requireContext(), ResultActivity::class.java)
+                    startActivity(intent)
+                }
+
+                if(spinner3.selectedItemPosition == 1){
+                    val intent = Intent(requireContext(), CTActivity::class.java)
+                    startActivity(intent)
+                }
+
+                if(spinner3.selectedItemPosition == 2){
+                    val intent = Intent(requireContext(), WTActivity::class.java)
+                    startActivity(intent)
+                }
             }
             // making toast onNothingSelected
             else

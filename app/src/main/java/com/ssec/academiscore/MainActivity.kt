@@ -5,15 +5,17 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Button
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         val bottomNavigation: BottomNavigationView = findViewById(R.id.bottomNavigation)
 
         fillFragment(FragmentHome())
@@ -52,7 +54,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when(item!!.itemId){
-            R.id.my_account-> {
+            R.id.my_profile-> {
                 val i = Intent(this,StudentActivity::class.java)
                 this.startActivity(i)
             }
@@ -60,8 +62,11 @@ class MainActivity : AppCompatActivity() {
                 val i = Intent(this,SettingsActivity::class.java)
                 this.startActivity(i)
             }
-            R.id.logout-> { 
-                //todo
+            R.id.logout-> {
+                FirebaseAuth.getInstance().signOut()
+                val intent = Intent(this, LoginActivity::class.java)
+                startActivity(intent)
+                finish()
             }
         }
         return super.onOptionsItemSelected(item)

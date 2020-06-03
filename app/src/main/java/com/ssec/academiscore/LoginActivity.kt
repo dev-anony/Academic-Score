@@ -31,6 +31,13 @@ class LoginActivity : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
 
+        if(auth.currentUser != null){
+            Toast.makeText(this, "Already Logged in", Toast.LENGTH_LONG).show()
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
         signinBtn.setOnClickListener{
             val email: String = emailEt.text.toString()
             val password: String = passwordEt.text.toString()
